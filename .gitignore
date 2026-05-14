@@ -1,0 +1,5 @@
+# Ignore original snowrider source
+snowrider3dd.github.io/
+
+# macOS system files
+.DS_Store

@@ -1,6 +1,62 @@
+/* Game Layout Fix */
+.overbox-game {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.game-suggestion.game-box-left,
+.game-suggestion.game-box-right {
+    width: 200px;
+    min-width: 200px;
+}
+
+.game-middle.box-frame {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+}
+
+@media (max-width: 991px) {
+    .game-suggestion.game-box-left,
+    .game-suggestion.game-box-right {
+        width: 100%;
+        order: 2;
+    }
+    .game-middle.box-frame {
+        width: 100%;
+        order: 1;
+    }
+}
+
+/* Widget Styles */
+.widget.wiget-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: #0b4fa3;
+    border-radius: 12px 12px 0 0;
+    color: white;
+    font-family: Fredoka One, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+.widget.wiget-title h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.us-grid-clayover-mini {
+    background-color: #0d5bb5;
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+}
+
 body {
     margin: 0;
-    font-family: "Poppins", -apple-system, BlinkMacSystemFont,
+    font-family: "Poppins", -apple-system, BlinkMacMacSystemFont,
         "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.65;
