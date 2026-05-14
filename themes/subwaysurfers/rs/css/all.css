@@ -1475,11 +1475,25 @@ footer {
     color: #fbc574;
 }
 
-#iframehtml5 {
-    margin: 0 auto;
+/* Game iframe wrapper — aspect-ratio container */
+.game-iframe-wrap {
+    position: relative;
     width: 100%;
-    /* min-height: 470px; */
-    aspect-ratio: 16 / 9;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+    background-color: #000;
+}
+
+#iframehtml5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
 }
 
 @media(max-width:1299px) {
