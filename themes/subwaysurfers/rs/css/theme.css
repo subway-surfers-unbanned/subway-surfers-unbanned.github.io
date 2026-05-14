@@ -23,8 +23,6 @@
     flex: 1 1 auto;
     min-width: 300px;
     max-width: calc(100% - 430px);
-    overflow: hidden;
-    border-radius: 16px;
 }
 
 /* Iframe wrapper sits flush inside box-frame — no top margin */
