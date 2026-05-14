@@ -1,31 +1,45 @@
-/* Game Layout Fix */
+/* Game Layout Fix - Keep Original 3-column Layout */
 .overbox-game {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 15px;
+    align-items: flex-start;
     justify-content: center;
 }
 
-.game-suggestion.game-box-left,
-.game-suggestion.game-box-right {
-    width: 200px;
+.game-suggestion.game-box-left {
+    flex: 0 0 200px;
     min-width: 200px;
+    max-width: 200px;
+}
+
+.game-suggestion.game-box-right {
+    flex: 0 0 200px;
+    min-width: 200px;
+    max-width: 200px;
 }
 
 .game-middle.box-frame {
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 300px;
-    max-width: 800px;
+    max-width: calc(100% - 430px);
 }
 
 @media (max-width: 991px) {
+    .overbox-game {
+        flex-wrap: wrap;
+    }
     .game-suggestion.game-box-left,
     .game-suggestion.game-box-right {
         width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
         order: 2;
     }
     .game-middle.box-frame {
         width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
         order: 1;
     }
 }
