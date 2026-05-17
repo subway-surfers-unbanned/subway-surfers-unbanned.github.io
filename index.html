@@ -134,6 +134,17 @@
 								id="iframehtml5" scrolling="no" data-src="https://papasgames.onl/play/subway-surfers/"
 								src="about:blank" title="Subway Surfers" width="100%">
 							</iframe>
+							<div id="play-overlay">
+								<div class="play-overlay-content">
+									<div class="play-icon">
+										<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 5v14l11-7-11-7z" fill="currentColor"/>
+										</svg>
+									</div>
+									<button id="play-button" class="play-btn">PLAY NOW</button>
+									<p class="play-hint">Click to start the game</p>
+								</div>
+							</div>
 						</div>
 						<div class="game-flow" id="header-game">
 							<div class="header-game">
@@ -294,15 +305,30 @@
 				}
 			}
 
-			// Initialize
+			// Initialize - Add play button functionality
 			document.addEventListener('DOMContentLoaded', function () {
-				// Load game after a short delay
-				setTimeout(function () {
-					var iframe = document.getElementById('iframehtml5');
-					if (iframe && iframe.getAttribute('data-src')) {
-						iframe.src = iframe.getAttribute('data-src');
-					}
-				}, 100);
+				var playButton = document.getElementById('play-button');
+				var overlay = document.getElementById('play-overlay');
+				var iframe = document.getElementById('iframehtml5');
+
+				if (playButton && overlay && iframe) {
+					playButton.addEventListener('click', function () {
+						// Fade out overlay
+						overlay.style.opacity = '0';
+						overlay.style.pointerEvents = 'none';
+
+						// Load the game
+						var src = iframe.getAttribute('data-src');
+						if (src) {
+							iframe.src = src;
+						}
+
+						// Remove overlay after transition
+						setTimeout(function () {
+							overlay.style.display = 'none';
+						}, 400);
+					});
+				}
 			});
 		</script>
 </body>
