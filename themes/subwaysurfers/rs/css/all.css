@@ -553,26 +553,18 @@ button {
 }
 
 .privacy-link {
-    display: inline-block;
-    padding: 8px 20px;
-    background: linear-gradient(135deg, #FFCC00 0%, #FF9500 100%);
-    color: #0A2A4D;
-    font-weight: 700;
+    color: #ffcc00;
     font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 50px;
+    font-weight: 700;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
-    border: 2px solid #FFCC00;
+    text-transform: capitalize;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
 }
 
 .privacy-link:hover {
-    background: linear-gradient(135deg, #FF9500 0%, #FFCC00 100%);
-    color: #0A2A4D;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+    color: #ffffff;
+    text-decoration: underline;
 }
     gap: 15px;
 }
