@@ -74,17 +74,16 @@
 }
 
 /* ============================================
-   PLAY BUTTON OVERLAY
+   PLAY BUTTON OVERLAY (Snow Rider style)
    ============================================ */
 
 #play-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
-    background: 
-        linear-gradient(135deg, rgba(11, 79, 163, 0.9) 0%, rgba(13, 91, 181, 0.95) 100%),
+    background:
+        linear-gradient(135deg, rgba(11, 79, 163, 0.75) 0%, rgba(13, 91, 181, 0.85) 100%),
         url('/upload/cache/upload/imgs/subwaysurfers.png') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -99,58 +98,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-
-.play-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #ffcc00 0%, #ff9500 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 
-        0 8px 32px rgba(255, 204, 0, 0.4),
-        0 0 0 4px rgba(255, 255, 255, 0.1);
-    animation: pulse-play 2s ease-in-out infinite;
-}
-
-.play-icon svg {
-    width: 36px;
-    height: 36px;
-    color: #fff;
-    margin-left: 4px; /* optical center for play triangle */
-}
-
-@keyframes pulse-play {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 
-            0 8px 32px rgba(255, 204, 0, 0.4),
-            0 0 0 4px rgba(255, 255, 255, 0.1);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 
-            0 12px 40px rgba(255, 204, 0, 0.6),
-            0 0 0 8px rgba(255, 255, 255, 0.15);
-    }
+    gap: 16px;
 }
 
 .play-btn {
     background: linear-gradient(135deg, #ffcc00 0%, #ff9500 100%);
     color: #fff;
     border: none;
-    padding: 16px 48px;
-    font-size: 24px;
+    padding: 18px 56px;
+    font-size: 26px;
     font-weight: 900;
     font-family: 'Fredoka One', Verdana, sans-serif;
     border-radius: 50px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(255, 204, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
@@ -171,7 +134,7 @@
 
 .play-btn:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 12px 40px rgba(255, 204, 0, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
