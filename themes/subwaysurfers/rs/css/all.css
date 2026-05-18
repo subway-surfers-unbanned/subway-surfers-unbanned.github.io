@@ -540,11 +540,16 @@ button {
 
 /*menu*/
 .us-navbar-ontop {
-    padding: 10px 0;
+    padding: 10px 15px;
     max-height: 61px;
     box-sizing: border-box;
     overflow: hidden;
     font-weight: 700;
+}
+
+.us-menuheader-site {
+    border-bottom: 2px solid #ffcc00;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .right-navbar--flex {
